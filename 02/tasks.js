@@ -3,9 +3,12 @@
  * Доп. задание: предложите несколько вариантов решения.
  */
 function timer(logger = console.log) {
-  for (var i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
+    let n = logger.bind({
+      ind: i
+    });
     setTimeout(() => {
-      logger(i);
+      n(i);
     }, 100);
   }
 }
@@ -20,7 +23,9 @@ function timer(logger = console.log) {
  * @return {Function} функция с нужным контекстом
  */
 function customBind(func, context, ...args) {
-
+  return () => {
+    return func.call(context, [...args]);
+  };
 }
 
 /*= ============================================ */
@@ -33,7 +38,18 @@ function customBind(func, context, ...args) {
  * sum :: void -> Number
  */
 function sum(x) {
-  return 0;
+  if (x === undefined) {
+    return 0;
+  }
+  let s = x;
+  return function sum2(y) {
+    if (y === undefined) {
+      return s;
+    } else {
+      s += y;
+      return sum2;
+    }
+  }
 }
 
 /*= ============================================ */
@@ -45,7 +61,7 @@ function sum(x) {
  * @return {boolean}
  */
 function anagram(first, second) {
-  return false;
+   return (first.split('').sort().join('')===second.split('').sort().join('')?true:false);
 }
 
 /*= ============================================ */
@@ -57,7 +73,15 @@ function anagram(first, second) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getUnique(arr) {
-  return [];
+  let res=[];
+  arr.sort();
+  res.push(arr[0]);
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i]!=arr[i-1]) {
+      res.push(arr[i]);
+    }
+  }
+  return res;
 }
 
 /**
@@ -67,7 +91,22 @@ function getUnique(arr) {
  * @return {Array<number>} массив уникальных значений, отсортированный по возрастанию
  */
 function getIntersection(first, second) {
-  return [];
+
+  first.sort((a, b)=>{return (a-b)});
+  second.sort((a, b)=>{return (a-b)});
+  let res = [];
+  while( first.length > 0 && second.length > 0 )
+  {
+    if      (first[0] < second[0] ){ first.shift(); }
+    else if (first[0] > second[0] ){ second.shift(); }
+    else
+    {
+      res.push(first.shift());
+      second.shift();
+    }
+  }
+
+  return res;
 }
 
 /* ============================================= */
@@ -86,7 +125,20 @@ function getIntersection(first, second) {
  * @return {boolean}
  */
 function isIsomorphic(left, right) {
-
+  if (left.length!=right.length) {
+    return false;
+  }
+  let dist = 0;
+  let l = left.length;
+  for (let i = 0; i < l; i++) {
+    if (left[i]!=right[i]) {
+      dist++;
+      if (dist===2){
+        return false
+      }
+    }
+  }
+  return true;
 }
 
 module.exports = {
@@ -98,3 +150,5 @@ module.exports = {
   getIntersection,
   isIsomorphic
 };
+
+console.log(sum(1)(2)(4)(5)())
