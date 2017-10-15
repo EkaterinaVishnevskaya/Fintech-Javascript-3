@@ -12,7 +12,7 @@ function promiseAll(promises) {
   return new Promise((resolve, reject) => {
     promises.forEach((prom, i) => prom
       .then(value => {
-        count ++;
+        count++;
         values[i] = value;
       }, reject)
       .then(() => {
