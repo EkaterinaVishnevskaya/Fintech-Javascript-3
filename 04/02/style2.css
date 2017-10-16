@@ -1,30 +1,36 @@
 h1 {
     color: #ff0;
 }
-table {
+
+.first {
+    
     border-collapse: collapse;
+    width: 745px;
 }
 .first th {
     background-color: red;
     border-bottom: 2px solid black;
     padding: 5px;
 }
+
 .first td {
     padding: 5px;
     width: 20%;
 }
 
-.first td:nth-child(1) {
-    overflow: hidden;
-    text-overflow: ellipsis;
+.first tr {
+    width: 750px;
 }
 .first tr:nth-child(2n-1) {
     background-color: lightpink;
 }
-
 .first tr:hover {
     background-color: lightgray;
+    color: white;
 }
+
+.second {
+    border-collapse: collapse;}
 
 .second td {
     border: solid white 8px;
