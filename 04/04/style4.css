@@ -3,7 +3,6 @@
 
 #content {
     width: 960px;
-    font-family: Roboto;
     text-align: center;
     margin: auto;
 }
@@ -17,6 +16,11 @@ h2 {
 
 img {
     width: 100%;
+}
+
+p{
+    
+    font-family: Roboto;
 }
 
 iframe{
