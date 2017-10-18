@@ -1,57 +1,65 @@
 h1 {
-    color: #ff0;
+  color: #ff0;
 }
 
 .first {
-    
-    border-collapse: collapse;
-    width: 745px;
+  border-collapse: collapse;
+  width: 745px;
 }
+
 .first th {
-    background-color: red;
-    border-bottom: 2px solid black;
-    padding: 5px;
+  background-color: red;
+  border-bottom: 2px solid black;
+  padding: 5px;
 }
 
 .first td {
-    padding: 5px;
-    width: 20%;
+  padding: 5px;
+  width: 20%;
 }
 
 .first tr {
-    width: 750px;
+  width: 750px;
 }
+
 .first tr:nth-child(2n-1) {
-    background-color: lightpink;
+  background-color: lightpink;
 }
+
 .first tr:hover {
-    background-color: lightgray;
-    color: white;
+  background-color: lightgray;
+  color: white;
 }
 
 .second {
-    border-collapse: collapse;}
+  border-collapse: collapse;
+}
 
 .second td {
-    border: solid white 8px;
-    padding: 8px;
+  border: solid white 8px;
+  padding: 8px;
 }
 
 .second td:nth-child(1) {
-    background-color: #3fbf80;
+  background-color: #3fbf80;
 }
+
 .second td:nth-child(2) {
-    background-color: #33cc99;
+  background-color: #3c9;
 }
+
 .second td:nth-child(3) {
-    background-color: #26d9bb;
+  background-color: #26d9bb;
 }
+
 .second td:nth-child(4) {
-    background-color: #19e6e6;
+  background-color: #19e6e6;
 }
+
 .second td:nth-child(5) {
-    background-color: #0cccf3;
+  background-color: #0cccf3;
 }
+
 .second td:nth-child(6) {
-    background-color: #02aafe;
+  background-color: #02aafe;
 }

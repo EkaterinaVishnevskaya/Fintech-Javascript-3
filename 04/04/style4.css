@@ -2,46 +2,41 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 #content {
-    width: 960px;
-    text-align: center;
-    margin: auto;
+  width: 960px;
+  text-align: center;
+  margin: auto;
 }
+
 h1 {
-    font-family: Roboto Condensed;
+  font-family: Roboto Condensed;
 }
 
 h2 {
-    font-family: Roboto Condensed;
+  font-family: Roboto Condensed;
 }
 
 p {
-    font-family: Roboto;
+  font-family: Roboto;
 }
 
 img {
-    width: 80%;
+  width: 80%;
 }
 
-p{
-    
-    font-family: Roboto;
-}
-
-iframe{
-    width: 960px;
-    height: 540px;
+iframe {
+  width: 960px;
+  height: 540px;
 }
 
 a {
-    color: black;
+  color: black;
 }
 
-a[href="https://ru.wikipedia.org/wiki/Lorem_ipsum"]:hover{
-    color: pink;
-    font-size: 20px;
+a[href="https://ru.wikipedia.org/wiki/Lorem_ipsum"]:hover {
+  color: pink;
+  font-size: 20px;
 }
 
-a[href="https://ru.wikipedia.org/wiki/Lorem_ipsum"]:visited{
-    color: red;
+a[href="https://ru.wikipedia.org/wiki/Lorem_ipsum"]:visited {
+  color: red;
 }
-
