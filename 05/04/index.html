@@ -2,17 +2,58 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <title>Задание 5.4</title>
 </head>
 <body>
-<h1>Сверстать форму. Pixel-perfect. Select делать не нужно</h1>
-<p>
-    Подробности по ссылке:
-    <a href="https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333">
-        https://app.zeplin.io/project/58a307271a9f6d513890adc8/screen/58a3075a4ec334e848d7f333
-    </a>, для того чтобы получить доступ, нужно зарегестрироваться на
-    <a href="https://zeplin.io/">zeplin.io</a>, и попросить доступ у Евгения Мамаева.
-</p>
-<img src="./task.png" alt="">
+    <form class="form_block">
+    <fieldset class="form">
+        <div class="form_elem">
+            <input id="name" class="elem-input elem-input_name" type="text" autocomplete="off" required>
+            <label class="elem-label" for="name">ФИО</label>
+        </div>
+        <div class="form_elem">
+            <input id="locality" class="elem-input elem-input_locality" type="text" autocomplete="off" required>
+            <label class="elem-label" for="locality">Город проживания</label>
+            <div class="form_warner"></div>
+            <div class="form_error">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</div>
+        </div>
+        <div class="form_elem">
+            <input id="tel" class="elem-input" type="tel" autocomplete="off" required>
+            <label class="elem-label" for="tel">Мобильный телефон</label>
+        </div>
+        <div class="form_elem">
+            <input id="email" class="elem-input elem-input_email" type="text" autocomplete="off" required>
+            <label class="elem-label" for="email">Электронная почта</label>
+            <div class="help">
+                <p class="help-text">
+                    Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
+                </p>
+            </div>
+        </div>
+    </fieldset>
+    
+    <fieldset class="selector_block">
+        <legend class="selector_header">Выберите это или другое</legend>
+        
+        <div class="selector">
+            <div class="select_item">
+                <label class="select_label" for="this">Это
+                    <input type="radio" id="this" class="select_radio" name="selector" checked>
+                        <span class="select_checked"></span>
+                        </label>
+            </div>
+            <div class="select_item">
+                <label class="select_label" for="other">Другое
+                    <input type="radio" id="other" class="select_radio" name="selector">
+                        <span class="select_checked"></span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    
+    <input class="submit" type="submit"></button>
+    </form>
 </body>
 </html>

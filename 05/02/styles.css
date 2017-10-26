@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.banner {
+    width: 1080px;
+    height: 413px;
+    background-image: linear-gradient(to right, #1489e7, #003e82);
+    overflow: hidden;
+    position: absolute;
+}
+
+.cards {
+    width: 542px;
+    object-fit: contain;
+}
+
+.ban_head1 {
+    width: 342px;
+    height: 100px;
+    line-height: 1;
+    position: absolute;
+    margin-left: 556px;
+    margin-top: 91px;
+    font-family: Roboto;
+    font-size: 50px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.ban_head2 {
+    width: 326px;
+    height: 48px;
+    position: absolute;
+    margin-left: 556px;
+    margin-top: 209px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.button {
+    width: 212px;
+    height: 62px;
+    border-radius: 6px;
+    background-color: #ffdd2d;
+    background-color: var(--sun-yellow);
+    position: absolute;
+    margin-left: 556px;
+    margin-top: 277px;
+}
+
